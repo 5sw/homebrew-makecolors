@@ -6,7 +6,7 @@ class Makecolors < Formula
   license "MIT"
 
   def install
-    system "swift", "build", "-c", "release"
+    system "swift", "build", "-c", "release", "--disable-sandbox"
     system "cp", ".build/release/MakeColors", "#{prefix}/bin"
   end
 end
